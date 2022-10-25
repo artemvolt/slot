@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  php-8:
+    container_name: slotegrator_php
+    build: docker/php
+    ports:
+      - 8777:8777
+    volumes:
+      - ./:/var/www
