@@ -13,7 +13,6 @@ class ErrorController
     public function exception(FlattenException $exception)
     {
         $msg = 'Something went wrong! ('.$exception->getMessage().')';
-
         return new Response($msg, $exception->getStatusCode());
     }
 }
