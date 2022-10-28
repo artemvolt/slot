@@ -1,6 +1,6 @@
 <?php
 
-namespace Slotegrator\Core\Events;
+namespace Slotegrator\App\Events;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
