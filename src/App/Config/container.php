@@ -3,7 +3,6 @@
 use Slotegrator\App\Components\ControllerResolver;
 use Slotegrator\App\Components\ErrorController;
 use Slotegrator\App\Components\RequestHandler;
-use Slotegrator\App\Controllers\Api\TestController;
 use Symfony\Component\DependencyInjection;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\EventDispatcher;
@@ -29,9 +28,7 @@ $containerBuilder->register('render', Environment::class)
             'cache' => __DIR__ . '/../Runtime/compilation_cache',
         ]
     ]);
-$containerBuilder->register('controller_Slotegrator_App_Controllers_Api_TestController', TestController::class)->setArguments([
-    new Reference('render')
-]);
+
 $containerBuilder->register('controller_resolver', ControllerResolver::class)->setArguments([
     null,
     $containerBuilder
